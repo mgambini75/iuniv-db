@@ -1,0 +1,304 @@
+/* Preload Utente di base University manager */
+delete FRW_UTENTI;
+
+Insert into FRW_UTENTI
+   (MID, CDA_USER, CDA_PASSW, CDA_REENTER_PASSW, IND_RUOLO, 
+    FLG_ATTIVO)
+ Values
+   (1, 'apex', 'admin', 'admin', 1, 
+    'S');
+
+/* Preload Lingue*/
+delete T_LANGUAGE;
+
+Insert into T_LANGUAGE
+   (LN_CODE, DESCRIPTION)
+ Values
+   ('it', 'Italiano');
+Insert into T_LANGUAGE
+   (LN_CODE, DESCRIPTION)
+ Values
+   ('en', 'English');
+
+/* Preload cache purge */
+delete FRW_ESECUZIONE_COMANDI;
+
+Insert into FRW_ESECUZIONE_COMANDI
+   (MID, DES_COMANDO, FLG_CONFIG, FLG_MODULI)
+ Values
+   (1, 'http://ua.kion.it/unibocconi/prerelease/api/v5/app/restart?secret=unibocconi', 0, 0);
+
+/* Preload profili */
+delete T_PROFILE;
+
+Insert into T_PROFILE
+   (MID, DES)
+ Values
+   (1, 'Studente');
+Insert into T_PROFILE
+   (MID, DES)
+ Values
+   (2, 'Docente');
+Insert into T_PROFILE
+   (MID, DES)
+ Values
+   (3, 'Pta');
+Insert into T_PROFILE
+   (MID, DES)
+ Values
+   (0, 'Pubblico');
+
+
+/* Preload moduli */
+delete FRW_MODULI;
+
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (300, 'URL_0', 'Random URL', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 80, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (301, 'URL_1', 'Random URL', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 13, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (302, 'URL_2', 'Random URL', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (310, 'FB', 'Facebook', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (102, 'GOS', 'Guida Online Cerca', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (9, 'ABT', 'About', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 100, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (207, 'DOC', 'Documenti', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 110, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (206, 'AZI', 'Azioni', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 100, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (208, 'WML', 'Webmail', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 11, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (0, 'FRW', 'Impostazioni', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 4, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (100, 'GOL', 'Guida online', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 1, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (101, 'ORI', 'Orari', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (110, 'SVR', 'Servizi', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (111, 'RUB', 'Rubrica', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (120, 'FOT', 'Foto', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (121, 'CHA', 'Video', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 3, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (130, 'NEW', 'News', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (131, 'EVE', 'Eventi', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 2, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (132, 'FEE', 'Feed', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 5, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (200, 'UTE', 'Profilo utente', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 6, 1, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (201, 'MSG', 'Messaggi', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 7, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (202, 'AGE', 'Agenda', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 8, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (203, 'LIB', 'Libretto', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 14, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (204, 'DSH', 'Cruscotto', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 13, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (205, 'ESA', 'Esami', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 12, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (133, 'LNK', 'Collegamenti', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 9, 1, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (209, 'TAX', 'Pagamenti', 1, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 10, 0, 1);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (303, 'URL_3', 'Random URL', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (304, 'URL_4', 'Random URL', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (311, 'TW', 'Twitter', 0, 0, 
+    0, 1, 1, 1, 1, 
+    1, 1, 0, 0, 0);
+Insert into FRW_MODULI
+   (MID, COD, DESCRIPTION, FLG_ATT_IOS, FLG_ATT_ANDROID, 
+    FLG_ACC_UTE_BLOC, FLG_ATT_TABLET, FLG_ATT_PHONE, FLG_PUB, FLG_STU, 
+    FLG_DOC, FLG_PTA, CDN_ORDIN, FLG_ATT_WP, FLG_ATT_WS)
+ Values
+   (210, 'QUE', 'Questionari', 0, 1, 
+    0, 1, 1, 1, 1, 
+    1, 1, 100, 0, 0);
+
+

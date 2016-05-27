@@ -1,0 +1,38 @@
+/* Formatted on 14/03/2016 11:45:34 (QP5 v5.287) */
+CREATE OR REPLACE FORCE VIEW API_EV_DETAIL
+(
+   MID,
+   LANG,
+   TITLE,
+   TESTO,
+   SPEAKER,
+   PAGAMENTO,
+   LOCATION,
+   DATA_STRING,
+   ICONS,
+   ACTION_DATA_TO,
+   ACTION_DATA_FROM,
+   ACTION_LOC_LAT,
+   ACTION_LOC_LON,
+   ACTION_URL,
+   ACTION_ATTACHMENT,
+   ACTION_SUBSCRIPTION
+)
+AS
+   SELECT MID,
+          LANG,
+          TITLE,
+          TESTO,
+          SPEAKER,
+          PAGAMENTO,
+          LOCATION,
+          DATA_STRING,
+          ICONS,
+          ACTION_DATA_TO,
+          ACTION_DATA_FROM,
+          ACTION_LOC_LAT,
+          ACTION_LOC_LON,
+          ACTION_URL,
+          ACTION_ATTACHMENT,
+          ACTION_SUBSCRIPTION
+     FROM TAB_EV_DETAIL;

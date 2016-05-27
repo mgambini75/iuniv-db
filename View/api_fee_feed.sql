@@ -1,0 +1,21 @@
+/* Formatted on 14/03/2016 11:45:35 (QP5 v5.287) */
+CREATE OR REPLACE FORCE VIEW API_FEE_FEED
+(
+   MID,
+   TITLE,
+   DESCRIPTION,
+   URL,
+   MID_PADRE,
+   ORDINAMENTO,
+   MID_TIPO_FEED
+)
+AS
+     SELECT MID,
+            TITLE,
+            DESCRIPTION,
+            URL,
+            MID_PADRE,
+            ORDINAMENTO,
+            MID_TIPO_FEED
+       FROM TAB_FEE_FEED
+   ORDER BY ORDINAMENTO;

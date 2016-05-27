@@ -1,0 +1,22 @@
+/* Formatted on 14/03/2016 11:45:33 (QP5 v5.287) */
+CREATE OR REPLACE FORCE VIEW API_AZN_CATEGORY
+(
+   MID,
+   LANG,
+   STU_ID,
+   CATEGORIA
+)
+AS
+   SELECT DISTINCT
+          AGE_AVT_ID AS MID,
+          LN_CODE AS LANG,
+          AGE_AZN_STU_ID AS STU_ID,
+          DECODE (LN_CODE,
+                  'it', AGE_AZT_TITOLO_ITA,
+                  'en', AGE_AZT_TITOLO_ENG,
+                  NULL)
+             AS CATEGORIA
+     FROM AGE_AZIONI A
+          JOIN AGE_AZIONI_TIPI B ON AGE_AVT_ID = AGE_AZN_RIF_TIPO
+          JOIN T_AGE_AZIONI ON MID = AGE_AVT_ID
+    WHERE AGE_AZN_STATO = 'N';

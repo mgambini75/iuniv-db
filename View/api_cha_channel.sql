@@ -1,0 +1,21 @@
+/* Formatted on 14/03/2016 11:45:34 (QP5 v5.287) */
+CREATE OR REPLACE FORCE VIEW API_CHA_CHANNEL
+(
+   MID,
+   DESCRIPTION,
+   TIPO,
+   TITLE,
+   COD,
+   IS_DEFAULT,
+   ORDINAMENTO
+)
+AS
+     SELECT MID,
+            DESCRIPTION,
+            TIPO,
+            TITLE,
+            COD,
+            IS_DEFAULT,
+            ORDINAMENTO
+       FROM TAB_CHA_CHANNEL
+   ORDER BY ORDINAMENTO;

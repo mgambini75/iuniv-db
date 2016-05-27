@@ -1,0 +1,28 @@
+/* Formatted on 14/03/2016 11:45:33 (QP5 v5.287) */
+CREATE OR REPLACE FORCE VIEW API_CC_AD_CLA_DOC
+(
+   MID,
+   LANG,
+   PERCORSO,
+   ATTIVITA,
+   CLASSE,
+   DOCENTE,
+   NOMINATIVO_DOCENTE,
+   COD_MATR_DOC,
+   TITOLARE,
+   MID_AD_CLA,
+   MID_DOC
+)
+AS
+   SELECT A.MID,
+          A.LN_CODE AS LANG,
+          A.PERCORSO,
+          A.ATTIVITA,
+          A.CLASSE,
+          A.DOCENTE,
+          A.NOMINATIVO_DOCENTE,
+          B.COD_MATR_DOC,
+          B.TITOLARE,
+          B.MID_AD_CLA AS MID_AD_CLA,
+          B.MID_DOC AS MID_DOC
+     FROM GOL_AD_CLA_DOC_LN A JOIN GOL_AD_CLA_DOC B ON a.mid = b.mid;
